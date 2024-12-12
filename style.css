@@ -43,6 +43,13 @@
     color: #561D52;
     padding: 2rem;
     border-radius: 0.8rem;
+    box-shadow: 5px 5px 5px #561D52;
+}
+.rating:hover{
+    transition: transform 0.3s ease;
+    transform: translateY(8px);
+    width: 100%;
+    cursor: pointer;
 }
 ul{
     display: flex;
@@ -58,22 +65,26 @@ ul{
     font-size: 1.6rem;
 }
 .card-container{
+    display: flex;
+    flex-direction: column;
     margin-bottom: 2rem;
 }
 .card{
-    /* display: flex; */
-    /* justify-content: center; */
-    /* align-items: center; */
     margin-top: 2rem;
     background-color: #511F50;
     padding: 2rem;
     border-radius: 0.8rem;
+    box-shadow: 5px 5px 5px #8E7B8F;
+}
+.card:hover{
+    transition: transform 0.9s ease;
+    transform: rotate(360deg);
+    cursor: pointer;
 }
 .profile-detail{
     display: flex;
     text-align: start;
     align-items: center;
-    /* margin-left: 2rem; */
     margin-bottom: 1.5rem;
 }
 .profile-pic img{
@@ -88,7 +99,6 @@ ul{
     margin-left: 1.5rem;
 }
 .profile-info h4{
-    /* margin-left: 0.5rem; */
     font-size: 1.4rem;
     color: #ffffff;
     margin-bottom: 0.5rem;
@@ -106,7 +116,7 @@ ul{
     text-align: start;
 }
 
-@media (min-width: 630px) {
+@media (min-width: 670px) {
     body{
         padding: 8rem 0rem;
     }
@@ -122,17 +132,70 @@ ul{
         width: 50%;
     }
     .rating{
+        width: 90%;
+        margin-top: 3rem;
         flex-direction: row;
         text-align: center;
+        padding: 0.5rem;
+    }
+    .rateS{
+        margin-left: 2rem;
+    }
+    .rateT{
+        margin-left: 4rem;
+    }
+    .rating ul{
+        margin-bottom: 0rem;
     }
     .rating ul li img{
         width: 1rem;
         height: 1rem;
     }
-    .rating ul:first-child{
-        margin-left: -1rem;
-    }
+    
     .rating h4{
+        margin-left: 1rem;
+        font-size: 1rem;
+    }
+    .card-container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .card{
+        width: 32%;
+        height: 220px;
+    }
+    .cardS{
+        margin-top: 4rem;
+    }
+    .cardT{
+        margin-top: 6rem;
+    }
+    .profile-pic img{
+        width: 2.5rem;
+        height: 2.5rem;
+        
+    }
+    .profile-info{
+        margin-left: 0.5rem;
+    }
+    .profile-info h4{
+        margin-bottom: 0.2rem;
+        font-size: 1.1rem;
+    }
+    .profile-info p{
+        font-size: 1rem;
+    }
+    .card .content p{
+        font-size: 0.9rem;
+        line-height: 1.2rem;
+        font-weight: 400;
+    }
+}
+@media (min-width: 990px){
+    body{
+        padding: 8rem 8rem;
+    }
+    .card .content p{
         font-size: 1rem;
     }
 }
